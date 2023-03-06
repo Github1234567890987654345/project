@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>calculator.com</title>
+</head>
+
+
+<body>
+  <div class='b'>
+  
+  <label id = "calculator" style="font-size:30px ;background-color:#24e34d">Calculator</label><br>
+  <br>
+  <input type = "number" id ="value1" class ="inp"
+  style = " background-color: #9ee6f8 ;width: 250px; height : 30px"><br>
+<br>
+  <input class ="inp" type = "number" id ="value2" style = " background-color:#9ee6f8;width: 250px; height : 30px"><br>
+<br>
+ <button id = "clcbutton" type = "submit" style = "background-color:#d268f4;width:50px; height : 30px"> 
+clear</button> 
+  <button id = "addsbutton" type = "submit" style = "background-color:#d268f4; width:30px; height : 30px"> 
++</button> 
+  <button id = "subbutton" type = "submit" style = "background-color:#d268f4;width:30px; height : 30px"> 
+-</button> 
+ <button id = "mulbutton" type = "submit" style = "background-color:#d268f4;width:30px; height : 30px"> 
+*</button> 
+ <button id = "divbutton" type = "submit" style = "background-color:#d268f4;width:30px; height : 30px"> 
+/</button> <br>
+  <br>
+  <div class="z">
+ <label id = "answer"  style = "font-size:50px"> </label></div>
+ <br>
+ <br>
+
+ <label style = "background-color:#8be087;font-size:30px;color:White;text-decoration:none
+ "><a href = "exit.html "target="_blank">Exit</a></label>
+  </div>
+ 
+<script>
+  
+let a;
+let b;
+let c;
+a = Number(a);
+b = Number(b);
+c = Number(c);
+c = 0;
+document.getElementById("answer").innerHTML = 0;
+
+document.getElementById("addsbutton").onclick = function(){
+a = Number(document.getElementById("value1").value);
+b = Number(document.getElementById("value2").value);
+add(a,b);
+
+
+document.getElementById("answer").innerHTML=c;
+}
+
+
+document.getElementById("subbutton").onclick = function(){
+a = document.getElementById("value1").value;
+b = document.getElementById("value2").value;
+sub(a,b);
+document.getElementById("answer").innerHTML=c;
+}
+
+
+document.getElementById("clcbutton").onclick = function(){
+document.getElementById("value1").value = null;
+document.getElementById("value2").value = null;
+
+document.getElementById("answer").innerHTML= 0;
+}
+
+document.getElementById("mulbutton").onclick = function(){
+a = document.getElementById("value1").value;
+b = document.getElementById("value2").value;
+mul(a,b);
+document.getElementById("answer").innerHTML=c;
+}
+document.getElementById("divbutton").onclick= function(){
+ a = Number(document.getElementById("value1").value);
+ b = Number(document.getElementById("value2").value);
+  div(a,b);
+  document.getElementById("answer").innerHTML = c;
+}
+
+function mul(a,b){
+ 
+  c = a*b;
+}
+
+function add(a,b){
+  c = a+b;
+}
+function sub(a,b)
+{
+  c = a-b;
+}
+function div(a,b)
+{
+  c = a/b;
+}
+  
+</script>
+<style>
+div.b{
+  
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  padding-left: auto;
+  padding-right: auto;
+  padding-bottom: 30px;
+  
+  text-align: center;
+  background-color: #bf90e3;
+}
+div.c{
+  text-align: center;
+  
+}
+div.z{
+  color: white;
+}
+.inp{
+  caret-color:#f33535;
+}
+</style>
+
+</body>
+
+</html>
