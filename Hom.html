@@ -15,9 +15,9 @@
   <label id = "calculator" style="font-size:30px ;background-color:#24e34d"class="tit">Calculator</label><br>
   <br>
   <input type = "number" id ="value1" class ="inp" 
-  style = " background-color: #9ee6f8 ;width: 250px; height : 30px"><br>
+  style = "width: 250px; height : 30px"><br>
 <br>
-  <input class ="inp" type = "number" id ="value2"  style = " background-color:#9ee6f8;width: 250px; height : 30px"><br>
+  <input class ="inp" type = "number" id ="value2"  style = "width: 250px; height : 30px"><br>
 <br>
  <button id = "clcbutton" type = "submit" style = "background-color:#ffff;width:50px; height : 30px"> 
 clear</button> 
@@ -83,9 +83,9 @@ mul(a,b);
 document.getElementById("answer").innerHTML=c;
 }
 document.getElementById("divbutton").onclick= function(){
- a = Number(document.getElementById("value1").value);
- b = Number(document.getElementById("value2").value);
-  div(a,b);
+ a = document.getElementById("value1").value;
+ b = document.getElementById("value2").value;
+  divd(a,b);
   document.getElementById("answer").innerHTML = c;
 }
 
@@ -101,7 +101,7 @@ function sub(a,b)
 {
   c = a-b;
 }
-function div(a,b)
+function divd(a,b)
 {
   c = a/b;
 }
@@ -129,9 +129,9 @@ div.z{
 }
 .inp{
   caret-color:#f33535 4px;
-  border-radius:30px;
+  border-radius:10px;
   font-size:20px;
-  border-style:dotted;
+  
   
 }
 .tit{
